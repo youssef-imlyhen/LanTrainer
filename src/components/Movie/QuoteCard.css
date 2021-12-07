@@ -1,0 +1,16 @@
+.quote{
+    background-color: #00595c;
+    padding: 1rem;
+    border-radius: 3%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    color: #012324;
+    height: fit-content;
+}
+.quote__delete{
+    background-color: inherit;
+    align-self: end;
+    border-color: black;
+    border-radius: 50%;
+}
