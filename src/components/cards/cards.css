@@ -1,0 +1,19 @@
+body{
+    background-color: darkslategrey;
+}
+.movie-cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.7fr;
+}
+.movie-card{
+    display: grid;
+    padding: 0.5rem 1.5rem ;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(42, 63, 63);
+    color: rgb(163, 217, 218);
+}
+.movie-card__thumbnail{
+    background-color: goldenrod;
+    height: 10rem;
+}
