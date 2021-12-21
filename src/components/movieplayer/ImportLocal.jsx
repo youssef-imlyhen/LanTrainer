@@ -13,14 +13,13 @@ export default function ImportLocal({dispatch}) {
     } 
     
     return (
-    <div className="select-container">
+    
       <input
         type="file"
         name="select-movie"
-        className="select-movie"
+        className=" btn"
         multiple
         onChange={changeHandler}
       />
-    </div>
   );
 }

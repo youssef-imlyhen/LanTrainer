@@ -27,7 +27,7 @@ export default function SaveQuote({lastPlayedCues, movieName}) {
         setSavedQuotes(newMovieQuotes)
     }
     return (
-      <button className="add-btn" onClick={clickHandler}>+</button>
+      <button className="btn btn-primary " onClick={clickHandler}>+</button>
     )
 }
 

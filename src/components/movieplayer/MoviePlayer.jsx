@@ -1,7 +1,6 @@
 import React, { useReducer, useEffect, useRef, useState } from "react";
 import ImportLocal from "./ImportLocal";
 import SaveQuote from "./SaveQuote";
-import "./movieplayer.css";
 
 export default function MoviePlayer() {
   const [selection, dispatch] = useReducer(setUpMovieReducer, {});
@@ -89,8 +88,8 @@ export default function MoviePlayer() {
 
   return (
     <div>
-      <figure className="container">
-        <video controls className="movie" src={selection.movieSrc} ref={moviePlayer} onPlay={movieLoadHandler}> 
+      <figure className="" className="">
+        <video controls className="container" src={selection.movieSrc} ref={moviePlayer} onPlay={movieLoadHandler}> 
           <track
             className="defaultTrack"
             kind="subtitles"
@@ -116,16 +115,16 @@ export default function MoviePlayer() {
             src={selection.lang2Src}
           />
         </video>
-        <div className="chapters">
-          <figcaption className="figcaption1">
-            {lastPlayedCues.lang1.text}
+        <div className="bg-neutral flex justify-between">
+          <figcaption className="card h-36 w-5/12">
+            <p className="card-body ">{lastPlayedCues.lang1.text}</p>
           </figcaption>
-          <figcaption className="figcaption2">
-            {lastPlayedCues.lang2.text}
+      <SaveQuote lastPlayedCues={lastPlayedCues} movieName={selection.movieName}/>
+          <figcaption className="card h-36 w-5/12">
+            <p className="card-body ">{lastPlayedCues.lang2.text}</p>
           </figcaption>
         </div>
       </figure>
-      <SaveQuote lastPlayedCues={lastPlayedCues} movieName={selection.movieName}/>
       <ImportLocal dispatch={dispatch} />
     </div>
   );

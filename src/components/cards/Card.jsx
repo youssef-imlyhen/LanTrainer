@@ -1,15 +1,25 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
-import "./cards.css"
-export default function Card({movie}) {
-    return (
-        <div className="flex flex-col bg-blue-900 justify-between  h-80">
-        <div className="h-40 bg-green-300 w-full"/>
-            <h2 className="text-xl">{movie.mediaName}</h2>
-            <p className="movie-card__desc">{movie.quotes.length} quotes</p>
-            <div className="flex justify-center">
-                <Link to={`/movie/${movie.mediaName}`} className="text-lg p-1.5 bg-green-500  text-green-900 text-center rounded-md hover:bg-green-600">Read More</Link>
-            </div>
+import React from "react";
+import { Link } from "react-router-dom";
+export default function Card({ movie }) {
+  return (
+    <div className="card bordered">
+      <figure>
+        <img src="https://picsum.photos/id/1005/400/250" />
+      </figure>
+      <div className="card-body">
+        <h2 className="card-title">
+          {movie.mediaName}
+          <div className="badge mx-2 badge">NEW</div>
+        </h2>
+        <p>
+        {movie.quotes.length} quotes
+        </p>
+        <div className="justify-end card-actions">
+        <Link className="btn" to={`/movie/${movie.mediaName}`}>Read More</Link>
+
         </div>
-    )
+      </div>
+    </div>
+  );
 }
+
