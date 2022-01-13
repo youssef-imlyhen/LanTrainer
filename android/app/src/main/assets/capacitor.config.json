@@ -1,0 +1,6 @@
+{
+	"appId": "com.langtrainer.app",
+	"appName": "langtrainer",
+	"webDir": "dist",
+	"bundledWebRuntime": false
+}

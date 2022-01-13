@@ -15,7 +15,7 @@ export default function Card({ movie }) {
         {movie.quotes.length} quotes
         </p>
         <div className="justify-end card-actions">
-        <Link className="btn" to={`/movie/${movie.mediaName}`}>Read More</Link>
+        <Link className="btn btn-sm" to={`/movie/${movie.mediaName}`}>Read More</Link>
 
         </div>
       </div>

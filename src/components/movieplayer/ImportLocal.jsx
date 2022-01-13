@@ -1,4 +1,5 @@
 import {useState, React} from "react";
+import {FaUpload} from 'react-icons/fa'
 
 export default function ImportLocal({dispatch}) {
     const [isSelected, setIsSelected] = useState(false);
@@ -13,13 +14,20 @@ export default function ImportLocal({dispatch}) {
     } 
     
     return (
-    
-      <input
+      <div className="grid place-items-center bg-neutral-focus">
+        <h1 className="text-2xl text-neutral-content my-4">Select The Location Of The Movie And Its Subtitles</h1>
+      <label className="btn  btn-info my-4">
+        <FaUpload className="mr-2"/>
+        <input
         type="file"
         name="select-movie"
-        className=" btn"
+        className="hidden"
         multiple
         onChange={changeHandler}
       />
+      Upload
+      </label>
+      </div>
+      
   );
 }

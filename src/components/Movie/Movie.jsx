@@ -29,7 +29,7 @@ export default function Movie() {
         ""
       )}
       <h1 className="text-4xl pb-8">{movieName}</h1>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-7 w-11/12">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-7 w-11/12">
         {
          allQuotes.length !== 0 ? 
         allQuotes

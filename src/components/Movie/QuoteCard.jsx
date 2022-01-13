@@ -11,9 +11,9 @@ export default function QuoteCard({quote, setSelectedQuotes}) {
         <div className="card bg-neutral shadow p-5 justify-between" > 
             <input type="checkbox" className="checkbox" onClick={handleClick}></input>
             <div id="quotes" className="">
-            <p className=" my-2 border-l-2 border-primary px-4 bg-base-100 rounded-md  ">{quote.main.text}</p>
-            <p className=" my-2 border-l-2 border-primary px-4 bg-base-100 rounded-md  ">{quote.lang1.text}</p>
-            <p className=" my-2 border-l-2 border-primary px-4 bg-base-100 rounded-md  ">{quote.lang2.text}</p>
+            <p className=" my-2  px-5"><span className="badge badge-info mr-1">EN </span>{quote.main.text}</p>
+            <p className=" my-2  px-5"><span className="badge badge-info mr-1">AR </span>{quote.lang1.text}</p>
+            <p className=" my-2  px-5"><span className="badge badge-info mr-1">FR </span>{quote.lang2.text}</p>
             </div>
             <div className="quote__details">
                 <p className="stat-desc ">{quote.addedTime}</p>
