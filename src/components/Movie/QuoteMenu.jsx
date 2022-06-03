@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Select from 'react-select'
+import Select from "react-select";
 import { FaRegTrashAlt, FaEllipsisH } from "react-icons/fa";
 export default function QuoteMenu({
   selectedQuotes,
@@ -9,7 +9,10 @@ export default function QuoteMenu({
   setSelectedQuotes,
   allQuotes,
 }) {
-  const [selectedQuizLangs, setSelectedQuizLangs] = useState({question: undefined, answers: undefined})
+  const [selectedQuizLangs, setSelectedQuizLangs] = useState({
+    question: undefined,
+    answers: undefined,
+  });
   // to understund (how i solved it)
   // i should use usereducer or an other usestate to chame this moviePagaQuotes.
   const deleteClickHandler = () => {
@@ -37,18 +40,17 @@ export default function QuoteMenu({
     console.log(selectedQuotes);
   };
   const options = [
-    { value: 'main', label: 'English' },
-    { value: 'lang1', label: 'Arabic' },
-    { value: 'lang2', label: 'French' }
-  ]
-  const select1ChangeHandler = e => {
-    setSelectedQuizLangs({...selectedQuizLangs, question: e.value})
-  }
-  const select2ChangeHandler = e => {
-    setSelectedQuizLangs({...selectedQuizLangs, answers: e.value})
+    { value: "main", label: "English" },
+    { value: "lang1", label: "Arabic" },
+    { value: "lang2", label: "French" },
+  ];
+  const select1ChangeHandler = (e) => {
+    setSelectedQuizLangs({ ...selectedQuizLangs, question: e.value });
+  };
+  const select2ChangeHandler = (e) => {
+    setSelectedQuizLangs({ ...selectedQuizLangs, answers: e.value });
     console.log(selectedQuizLangs);
-
-  }
+  };
   return (
     <ul className=" menu items-stretch px-3 shadow-lg  horizontal rounded-box fixed top-25 z-10 bg-neutral-focus">
       <li>
@@ -77,9 +79,17 @@ export default function QuoteMenu({
         <input type="checkbox" id="my-modal-2" className="modal-toggle" />
         <div className="modal">
           <div className="modal-box">
-            <Select className="text-primary" onChange={select1ChangeHandler} options={options}/>
+            <Select
+              className="text-primary"
+              onChange={select1ChangeHandler}
+              options={options}
+            />
             <p>to</p>
-            <Select className="text-primary" onChange={select2ChangeHandler} options={options}/>
+            <Select
+              className="text-primary"
+              onChange={select2ChangeHandler}
+              options={options}
+            />
             <div className="modal-action">
               <label htmlFor="my-modal-2" className="btn btn-primary">
                 Accept

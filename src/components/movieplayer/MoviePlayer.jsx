@@ -3,7 +3,6 @@ import ImportLocal from "./ImportLocal";
 import Player from "./Player";
 import SaveQuote from "./SaveQuote";
 import toWebVTT from "srt-webvtt";
-import ImportTest from "./ImportTest"
 
 export default function MoviePlayer() {
   const [selection, dispatch] = useReducer(setUpMovieReducer, {});

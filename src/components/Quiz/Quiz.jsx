@@ -76,17 +76,17 @@ export default function Quiz() {
                 question {questionIndex + 1 + "/" + questions.length}
               </h3>
             </div>
-              <div id="options" className={` mt-4 mb-4 rounded-2xl`}>
-                {questions[questionIndex].options.map((option) => (
-                  <p
-                    className="text-base-400 pt-3 pb-3 bg-primary hover:bg-primary-focus rounded-md text-center  mb-2"
-                    key={option}
-                    onClick={optionClickHandler}
-                  >
-                    {option}
-                  </p>
-                ))}
-              </div>
+            <div id="options" className={` mt-4 mb-4 rounded-2xl`}>
+              {questions[questionIndex].options.map((option) => (
+                <p
+                  className="text-base-400 pt-3 pb-3 bg-primary hover:bg-primary-focus rounded-md text-center  mb-2"
+                  key={option}
+                  onClick={optionClickHandler}
+                >
+                  {option}
+                </p>
+              ))}
+            </div>
             {isAnswerSubmited === false ? (
               <></>
             ) : isAnswerCorrect ? (
@@ -102,7 +102,12 @@ export default function Quiz() {
             ) : (
               <div className="alert alert-error">choose another answer</div>
             )}
-            <button className="btn btn-ghost bg-base-100" onClick={()=>setQuestionIndex(questionIndex+1)}>Skip</button>
+            <button
+              className="btn btn-ghost bg-base-100"
+              onClick={() => setQuestionIndex(questionIndex + 1)}
+            >
+              Skip
+            </button>
           </div>
         </div>
       )}
