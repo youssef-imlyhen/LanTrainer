@@ -105,7 +105,7 @@ https://user-images.githubusercontent.com/71871551/174432979-785ca5ea-d079-4eb6-
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+This project is not ready for use yet, so any help is **greatly appreciated**.
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request.
 Don't forget to give the project a star! Thanks again!
