@@ -101,6 +101,8 @@ https://user-images.githubusercontent.com/71871551/174432979-785ca5ea-d079-4eb6-
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+## Architecture 
+![design](https://user-images.githubusercontent.com/71871551/174436673-bf4f3da2-ae1d-4ab3-bcbf-939335bb2d9e.png)
 
 <!-- CONTRIBUTING -->
 ## Contributing
