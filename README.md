@@ -4,7 +4,7 @@
 <br />
 <div align="center">
 
-<h3 align="center">LangTrainer </h3>
+<h3 align="center">LanTrainer </h3>
 
   <p align="center">
     A react app that let's you enjoy learning while watching your favorite movies.
@@ -90,7 +90,7 @@ https://user-images.githubusercontent.com/71871551/174432979-785ca5ea-d079-4eb6-
 2. Install the dependencies 
 
 ```terminal
- cd langtrainer
+ cd LanTrainer
  npm i
 ```
 3. Run the app
@@ -155,4 +155,4 @@ Linkedin: [https://linkedin.com/in/youssef-imlyhen](https://linkedin.com/in/yous
 
 
 
-[product-screenshot]: langtrainer.mp4
+[product-screenshot]: LanTrainer.mp4
