@@ -27,16 +27,19 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
+              <li><a href="#main-features">Main Features</a></li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li>
+     <li>
       <a href="#getting-started">Getting Started</a>
     </li>
-    <li><a href="#contributing">Contributing</a></li>
+   <li><a href="#contributing">Contributing</a></li>   
+     <li>
+      <a href="#roadmap">Roadmap</a>
+    </li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -147,4 +150,4 @@ Linkedin: [https://linkedin.com/in/youssef-imlyhen](https://linkedin.com/in/yous
 
 
 
-[product-screenshot]: langtrainer1.mp4
+[product-screenshot]: langtrainer.mp4
