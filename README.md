@@ -48,7 +48,10 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product][product-screenshot]]
+
+https://user-images.githubusercontent.com/71871551/174432979-785ca5ea-d079-4eb6-8527-ddad6aaf245a.mp4
+
+
 1. First in the navigation click on the player link  
 2. Select the movie or a video that you have rights to (CC, public domain movies) with 3 subtitles files in vtt format (the main subtitle running on the video player, and the other two are running as chapters).
 3. Watch the movie with real time translation of the  3 selected languages.
