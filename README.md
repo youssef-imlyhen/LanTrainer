@@ -7,7 +7,7 @@
 <h3 align="center">LanTrainer </h3>
 
   <p align="center">
-    A react app that lets you enjoy learning while watching your favorite movies.
+    A react app that lets you enjoy learning while watching your favorite movies. I recommend reading [this article](https://bit.ly/3csfITu) to know more about the project.
     <br />
     <br />
     <br />
