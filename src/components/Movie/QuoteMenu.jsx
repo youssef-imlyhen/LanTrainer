@@ -13,8 +13,10 @@ export default function QuoteMenu({
     question: undefined,
     answers: undefined,
   });
+
   // to understund (how i solved it)
-  // i should use usereducer or an other usestate to chame this moviePagaQuotes.
+  // i should use usereducer or an other usestate to change this moviePageQuotes.
+  // there is a stale state issue here https://dmitripavlutin.com/react-hooks-stale-closures/
   const deleteClickHandler = () => {
     setAllQuotes((prev) => {
       const movieIndex = prev.findIndex(
@@ -27,18 +29,19 @@ export default function QuoteMenu({
           )
       );
       // the problem is in the system as whole
-      let newMovieQuotes = prev;
-      newMovieQuotes[movieIndex].quotes = quotes;
+      let newMovieQuotes = [...prev];
+      newMovieQuotes[movieIndex].quotes = [...quotes];
       console.log(newMovieQuotes[movieIndex].quotes.length);
       return newMovieQuotes;
     });
-
     setSelectedQuotes([]);
   };
-  const quizClickHandler = () => {};
+
+  const quizClickHandler = () => { console.log("hi from menu");};
   const editClickHandler = () => {
     console.log(selectedQuotes);
   };
+
   const options = [
     { value: "main", label: "English" },
     { value: "lang1", label: "Arabic" },
@@ -67,6 +70,7 @@ export default function QuoteMenu({
               "lang1",
               allQuotes
             ),
+            movieName,
           }}
         >
           quiz
@@ -95,7 +99,7 @@ export default function QuoteMenu({
                 Accept
               </label>
               <label htmlFor="my-modal-2" className="btn">
-                Clos
+                Close
               </label>
             </div>
           </div>
@@ -118,7 +122,8 @@ export default function QuoteMenu({
 function generateQuestions(selectedQuotes, sub1, sub2, allQuotes) {
   const questions = [];
   selectedQuotes.forEach((quote) => {
-    const wrongOptions = getRdmOptions(allQuotes, sub2, 3, quote[sub2].text);
+    const NUMBER_OF_OPTIONS = 3;
+    const wrongOptions = getRdmOptions(allQuotes, sub2, NUMBER_OF_OPTIONS, quote[sub2].text);
     questions.push({
       question: quote[sub1].text,
       options: [quote[sub2].text, ...wrongOptions].sort(
@@ -131,12 +136,18 @@ function generateQuestions(selectedQuotes, sub1, sub2, allQuotes) {
 
   return questions;
 }
-function getRdmOptions(allQuotes, sub, rdmQuotesNum, correctAnswer) {
+
+// danger of infinit loop if quotes are less that 3 even without touching the 
+// quiz button
+
+function getRdmOptions(allQuotes, sub, optionsNum, correctAnswer) {
   // later will use only a fixed amount of quotes to search from
   let rdmOptionsSet = new Set();
-  console.log("size: ", rdmOptionsSet.size, "my num: ", rdmQuotesNum);
+  console.log("size: ", rdmOptionsSet.size, "my num: ", optionsNum);
   const quotes = allQuotes[0].quotes.map((quote) => quote[sub].text);
-  while (rdmOptionsSet.size < rdmQuotesNum) {
+  let counterBreak = 0
+  while (rdmOptionsSet.size < optionsNum && counterBreak < 300) {
+     counterBreak += 1;
     const rdmNum = Math.floor(Math.random() * quotes.length);
     if (correctAnswer === quotes[rdmNum]) continue;
     rdmOptionsSet.add(quotes[rdmNum]);
